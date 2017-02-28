@@ -69,7 +69,7 @@ void Calibrate(){
 
     //Encuentra la posición de todas las esquinas en las imágenes proveidas
     //TODO count number of images in a directory
-    for(int i = 1; i < 31; i++){
+    for(int i = 1; i < 32; i++){
         std::ostringstream oss;
         oss << "../Images/my_photo-" << i << ".jpg";
         std::string imageName = oss.str();
@@ -195,9 +195,9 @@ void display(){
             if (solved){
                 projectPoints(axis, rvec, tvec, cameraMatrix, distCoeffs, imagePoints);
                 
-                line(frame, imagePoints[0], imagePoints[1], blue, 8);
-                line(frame, imagePoints[0], imagePoints[2], green, 8);
-                line(frame, imagePoints[0], imagePoints[3], red, 8);
+                line(frame, imagePoints[0], imagePoints[1], green, 8);
+                line(frame, imagePoints[0], imagePoints[2], red, 8);
+                line(frame, imagePoints[0], imagePoints[3], blue, 8);
             }
         }
         
